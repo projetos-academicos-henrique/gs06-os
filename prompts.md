@@ -6,3 +6,5 @@
      logs de auditoria e teste de falha) revisada e testada pela equipe.
 2. "Use o PDF do desafio como base e não o briefing.md."
    - Resultado: conferência dos critérios de Operating Systems e inclusão da Ficha da CitizenTech no README.
+3. "O que preciso mandar, organize tudo para mim."
+   - Resultado: script de coleta de evidências, checklist da entrega e repositório git.
