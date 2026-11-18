@@ -68,7 +68,7 @@ Duas camadas de tolerância a falhas:
 Requisitos: VM **Ubuntu 22.04 ou 24.04** com acesso à internet e usuário com `sudo`.
 
 ```bash
-git clone <este-repositorio> safecity-infra
+git clone https://github.com/projetos-academicos-henrique/gs06-os safecity-infra
 cd safecity-infra
 sudo ./provisionar.sh
 ```
