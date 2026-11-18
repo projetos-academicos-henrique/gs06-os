@@ -1,0 +1,56 @@
+$ tail -60 /var/log/safecity/monitor.log; echo; echo '--- ALERTAS ---'; grep ALERTA /var/log/safecity/monitor.log | tail -20
+
+2026-11-18 18:41:28 [INFO] [monitor.sh] Monitor iniciado (intervalo 10s)
+2026-11-18 18:41:29 [INFO] [monitor.sh] cpu=1% mem=22% disco=61% api=OK
+2026-11-18 18:41:40 [INFO] [monitor.sh] cpu=0% mem=22% disco=61% api=OK
+2026-11-18 18:41:51 [INFO] [monitor.sh] cpu=0% mem=22% disco=61% api=OK
+2026-11-18 18:42:02 [INFO] [monitor.sh] cpu=0% mem=22% disco=61% api=OK
+2026-11-18 18:42:13 [INFO] [monitor.sh] cpu=33% mem=21% disco=61% api=OK
+2026-11-18 18:42:29 [INFO] [monitor.sh] cpu=0% mem=21% disco=61% api=FORA
+2026-11-18 18:42:45 [INFO] [monitor.sh] cpu=0% mem=21% disco=61% api=FORA
+2026-11-18 18:42:45 [ALERTA] [monitor.sh] API sem resposta em /health (2 checagens). Reiniciando safecity-api
+2026-11-18 18:42:50 [INFO] [monitor.sh] Monitor iniciado (intervalo 10s)
+2026-11-18 18:42:52 [INFO] [monitor.sh] cpu=100% mem=21% disco=61% api=OK
+2026-11-18 18:42:52 [ALERTA] [monitor.sh] CPU em 100% (limite 80%)
+2026-11-18 18:43:03 [INFO] [monitor.sh] cpu=100% mem=21% disco=61% api=OK
+2026-11-18 18:43:03 [ALERTA] [monitor.sh] CPU em 100% (limite 80%)
+2026-11-18 18:43:14 [INFO] [monitor.sh] cpu=100% mem=21% disco=61% api=OK
+2026-11-18 18:43:14 [ALERTA] [monitor.sh] CPU em 100% (limite 80%)
+2026-11-18 18:43:25 [INFO] [monitor.sh] cpu=0% mem=21% disco=61% api=OK
+2026-11-18 18:43:36 [INFO] [monitor.sh] cpu=0% mem=21% disco=61% api=OK
+2026-11-18 18:43:47 [INFO] [monitor.sh] cpu=0% mem=22% disco=61% api=OK
+2026-11-18 18:43:58 [INFO] [monitor.sh] cpu=1% mem=22% disco=61% api=OK
+2026-11-18 18:44:09 [INFO] [monitor.sh] cpu=0% mem=22% disco=61% api=OK
+2026-11-18 18:44:20 [INFO] [monitor.sh] cpu=0% mem=22% disco=61% api=OK
+2026-11-18 18:44:31 [INFO] [monitor.sh] cpu=0% mem=22% disco=61% api=OK
+2026-11-18 18:44:42 [INFO] [monitor.sh] cpu=0% mem=22% disco=61% api=OK
+2026-11-18 18:44:53 [INFO] [monitor.sh] cpu=0% mem=22% disco=61% api=OK
+2026-11-18 18:45:04 [INFO] [monitor.sh] cpu=0% mem=22% disco=61% api=OK
+2026-11-18 18:45:15 [INFO] [monitor.sh] cpu=1% mem=22% disco=61% api=OK
+2026-11-18 18:45:26 [INFO] [monitor.sh] cpu=0% mem=22% disco=61% api=OK
+2026-11-18 18:45:37 [INFO] [monitor.sh] cpu=0% mem=22% disco=61% api=OK
+2026-11-18 18:45:48 [INFO] [monitor.sh] cpu=0% mem=22% disco=61% api=OK
+2026-11-18 18:45:59 [INFO] [monitor.sh] cpu=0% mem=22% disco=61% api=OK
+2026-11-18 18:46:10 [INFO] [monitor.sh] cpu=0% mem=22% disco=61% api=OK
+2026-11-18 18:46:21 [INFO] [monitor.sh] cpu=0% mem=22% disco=61% api=OK
+2026-11-18 18:46:32 [INFO] [monitor.sh] cpu=1% mem=22% disco=61% api=OK
+2026-11-18 18:46:43 [INFO] [monitor.sh] cpu=1% mem=20% disco=61% api=FORA
+2026-11-18 18:46:59 [INFO] [monitor.sh] cpu=0% mem=21% disco=61% api=FORA
+2026-11-18 18:46:59 [ALERTA] [monitor.sh] API sem resposta em /health (2 checagens). Reiniciando safecity-api
+2026-11-18 18:47:05 [INFO] [monitor.sh] Monitor iniciado (intervalo 10s)
+2026-11-18 18:47:06 [INFO] [monitor.sh] cpu=100% mem=21% disco=61% api=OK
+2026-11-18 18:47:06 [ALERTA] [monitor.sh] CPU em 100% (limite 80%)
+2026-11-18 18:47:17 [INFO] [monitor.sh] cpu=100% mem=21% disco=61% api=OK
+2026-11-18 18:47:17 [ALERTA] [monitor.sh] CPU em 100% (limite 80%)
+2026-11-18 18:47:28 [INFO] [monitor.sh] cpu=100% mem=21% disco=61% api=OK
+2026-11-18 18:47:28 [ALERTA] [monitor.sh] CPU em 100% (limite 80%)
+
+--- ALERTAS ---
+2026-11-18 18:42:45 [ALERTA] [monitor.sh] API sem resposta em /health (2 checagens). Reiniciando safecity-api
+2026-11-18 18:42:52 [ALERTA] [monitor.sh] CPU em 100% (limite 80%)
+2026-11-18 18:43:03 [ALERTA] [monitor.sh] CPU em 100% (limite 80%)
+2026-11-18 18:43:14 [ALERTA] [monitor.sh] CPU em 100% (limite 80%)
+2026-11-18 18:46:59 [ALERTA] [monitor.sh] API sem resposta em /health (2 checagens). Reiniciando safecity-api
+2026-11-18 18:47:06 [ALERTA] [monitor.sh] CPU em 100% (limite 80%)
+2026-11-18 18:47:17 [ALERTA] [monitor.sh] CPU em 100% (limite 80%)
+2026-11-18 18:47:28 [ALERTA] [monitor.sh] CPU em 100% (limite 80%)

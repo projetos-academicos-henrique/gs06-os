@@ -1,0 +1,43 @@
+$ dotnet --info | head -20; echo; cat /etc/safecity/safecity.env; echo; ls -l /opt/safecity/app | head -15
+
+.NET SDK:
+ Version:           10.0.115
+ Commit:            8e0f8ed231
+ Workload version:  10.0.100-manifests.ad9f6d83
+ MSBuild version:   18.0.37+8e0f8ed23
+
+Runtime Environment:
+ OS Name:     ubuntu
+ OS Version:  26.04
+ OS Platform: Linux
+ RID:         ubuntu.26.04-x64
+ Base Path:   /usr/lib/dotnet/sdk/10.0.115/
+
+.NET workloads installed:
+There are no installed workloads to display.
+Configured to use workload sets when installing new manifests.
+No workload sets are installed. Run "dotnet workload restore" to install a workload set.
+
+Host:
+  Version:      10.0.15
+
+ASPNETCORE_ENVIRONMENT=Production
+ASPNETCORE_URLS=http://0.0.0.0:5080
+ConnectionStrings__SafeCity=Data Source=/var/lib/safecity/safecity.db
+DOTNET_CLI_TELEMETRY_OPTOUT=1
+
+total 8600
+-rwxr--r--  1 safecity safecity  170944 May 19  2024 Microsoft.Data.Sqlite.dll
+-rwxr--r--  1 safecity safecity   34736 May 19  2024 Microsoft.EntityFrameworkCore.Abstractions.dll
+-rwxr--r--  1 safecity safecity 1847216 May 19  2024 Microsoft.EntityFrameworkCore.Relational.dll
+-rwxr--r--  1 safecity safecity  204720 May 19  2024 Microsoft.EntityFrameworkCore.Sqlite.dll
+-rwxr--r--  1 safecity safecity 2086336 May 19  2024 Microsoft.EntityFrameworkCore.dll
+-rwxr--r--  1 safecity safecity   79992 Oct 18  2022 Microsoft.Extensions.DependencyModel.dll
+-rwxr--r--  1 safecity safecity   63096 May 24  2023 Microsoft.Extensions.Logging.Abstractions.dll
+-rwxr--r--  1 safecity safecity  173960 Aug 29  2020 Microsoft.OpenApi.dll
+-rwxr--r--  1 safecity safecity    5120 Jan 10  2023 SQLitePCLRaw.batteries_v2.dll
+-rwxr--r--  1 safecity safecity   50688 Jan 10  2023 SQLitePCLRaw.core.dll
+-rwxr--r--  1 safecity safecity   35840 Jan 10  2023 SQLitePCLRaw.provider.e_sqlite3.dll
+-rwxr-xr-x  1 safecity safecity  181016 Nov 18 18:41 SafeCity.Api
+-rw-r--r--  1 safecity safecity   16701 Nov 18 18:41 SafeCity.Api.deps.json
+-rw-r--r--  1 safecity safecity   34816 Nov 18 18:41 SafeCity.Api.dll

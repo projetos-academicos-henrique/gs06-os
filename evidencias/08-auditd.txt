@@ -1,0 +1,42 @@
+$ ausearch -k safecity -i 2>/dev/null | tail -40
+
+type=PATH msg=audit(11/18/26 18:41:22.867:747) : item=0 name=SQLitePCLRaw.batteries_v2.dll inode=530536 dev=fc:00 mode=file,744 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(11/18/26 18:41:22.867:747) : cwd=/home/henrique/safecity-infra 
+type=SYSCALL msg=audit(11/18/26 18:41:22.867:747) : arch=x86_64 syscall=fchownat success=yes exit=0 a0=0x3 a1=0x5bf72c8cabc0 a2=0x3e7 a3=0x3d7 items=1 ppid=2787 pid=3188 auid=henrique uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=pts1 ses=4 comm=chown exe=/usr/lib/cargo/bin/coreutils/chown subj=unconfined key=safecity 
+----
+type=PROCTITLE msg=audit(11/18/26 18:41:22.867:748) : proctitle=chown -R safecity:safecity /opt/safecity/app /var/lib/safecity 
+type=PATH msg=audit(11/18/26 18:41:22.867:748) : item=0 name=Swashbuckle.AspNetCore.Swagger.dll inode=530539 dev=fc:00 mode=file,744 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(11/18/26 18:41:22.867:748) : cwd=/home/henrique/safecity-infra 
+type=SYSCALL msg=audit(11/18/26 18:41:22.867:748) : arch=x86_64 syscall=fchownat success=yes exit=0 a0=0x3 a1=0x5bf72c8cabc0 a2=0x3e7 a3=0x3d7 items=1 ppid=2787 pid=3188 auid=henrique uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=pts1 ses=4 comm=chown exe=/usr/lib/cargo/bin/coreutils/chown subj=unconfined key=safecity 
+----
+type=PROCTITLE msg=audit(11/18/26 18:41:22.867:749) : proctitle=chown -R safecity:safecity /opt/safecity/app /var/lib/safecity 
+type=PATH msg=audit(11/18/26 18:41:22.867:749) : item=0 name=SafeCity.Application.dll inode=530613 dev=fc:00 mode=file,644 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(11/18/26 18:41:22.867:749) : cwd=/home/henrique/safecity-infra 
+type=SYSCALL msg=audit(11/18/26 18:41:22.867:749) : arch=x86_64 syscall=fchownat success=yes exit=0 a0=0x3 a1=0x5bf72c8cabc0 a2=0x3e7 a3=0x3d7 items=1 ppid=2787 pid=3188 auid=henrique uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=pts1 ses=4 comm=chown exe=/usr/lib/cargo/bin/coreutils/chown subj=unconfined key=safecity 
+----
+type=PROCTITLE msg=audit(11/18/26 18:41:22.867:750) : proctitle=chown -R safecity:safecity /opt/safecity/app /var/lib/safecity 
+type=PATH msg=audit(11/18/26 18:41:22.867:750) : item=0 name=SafeCity.Domain.pdb inode=530620 dev=fc:00 mode=file,644 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(11/18/26 18:41:22.867:750) : cwd=/home/henrique/safecity-infra 
+type=SYSCALL msg=audit(11/18/26 18:41:22.867:750) : arch=x86_64 syscall=fchownat success=yes exit=0 a0=0x3 a1=0x5bf72c8c5ea0 a2=0x3e7 a3=0x3d7 items=1 ppid=2787 pid=3188 auid=henrique uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=pts1 ses=4 comm=chown exe=/usr/lib/cargo/bin/coreutils/chown subj=unconfined key=safecity 
+----
+type=PROCTITLE msg=audit(11/18/26 18:41:22.867:751) : proctitle=chown -R safecity:safecity /opt/safecity/app /var/lib/safecity 
+type=PATH msg=audit(11/18/26 18:41:22.867:751) : item=0 name=SafeCity.Domain.xml inode=530621 dev=fc:00 mode=file,644 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(11/18/26 18:41:22.867:751) : cwd=/home/henrique/safecity-infra 
+type=SYSCALL msg=audit(11/18/26 18:41:22.867:751) : arch=x86_64 syscall=fchownat success=yes exit=0 a0=0x3 a1=0x5bf72c8c5ea0 a2=0x3e7 a3=0x3d7 items=1 ppid=2787 pid=3188 auid=henrique uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=pts1 ses=4 comm=chown exe=/usr/lib/cargo/bin/coreutils/chown subj=unconfined key=safecity 
+----
+type=PROCTITLE msg=audit(11/18/26 18:41:22.867:752) : proctitle=chown -R safecity:safecity /opt/safecity/app /var/lib/safecity 
+type=PATH msg=audit(11/18/26 18:41:22.867:752) : item=0 name=Microsoft.EntityFrameworkCore.Sqlite.dll inode=530532 dev=fc:00 mode=file,744 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(11/18/26 18:41:22.867:752) : cwd=/home/henrique/safecity-infra 
+type=SYSCALL msg=audit(11/18/26 18:41:22.867:752) : arch=x86_64 syscall=fchownat success=yes exit=0 a0=0x3 a1=0x5bf72c8cc730 a2=0x3e7 a3=0x3d7 items=1 ppid=2787 pid=3188 auid=henrique uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=pts1 ses=4 comm=chown exe=/usr/lib/cargo/bin/coreutils/chown subj=unconfined key=safecity 
+----
+type=PROCTITLE msg=audit(11/18/26 18:41:22.869:753) : proctitle=cp /home/henrique/safecity-infra/systemd/safecity-api.service /etc/systemd/system/ 
+type=PATH msg=audit(11/18/26 18:41:22.869:753) : item=1 name=safecity-api.service inode=404420 dev=fc:00 mode=file,644 ouid=root ogid=root rdev=00:00 nametype=CREATE cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(11/18/26 18:41:22.869:753) : item=0 name=/home/henrique/safecity-infra inode=394007 dev=fc:00 mode=dir,755 ouid=root ogid=root rdev=00:00 nametype=PARENT cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(11/18/26 18:41:22.869:753) : cwd=/home/henrique/safecity-infra 
+type=SYSCALL msg=audit(11/18/26 18:41:22.869:753) : arch=x86_64 syscall=openat success=yes exit=5 a0=0x3 a1=0x652c73f2ff84 a2=O_WRONLY|O_CREAT|O_EXCL a3=0x1b4 items=2 ppid=2787 pid=3189 auid=henrique uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=pts1 ses=4 comm=cp exe=/usr/bin/gnucp subj=unconfined key=safecity 
+----
+type=PROCTITLE msg=audit(11/18/26 18:41:27.618:805) : proctitle=cp /home/henrique/safecity-infra/systemd/safecity-monitor.service /etc/systemd/system/ 
+type=PATH msg=audit(11/18/26 18:41:27.618:805) : item=1 name=safecity-monitor.service inode=405311 dev=fc:00 mode=file,644 ouid=root ogid=root rdev=00:00 nametype=CREATE cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(11/18/26 18:41:27.618:805) : item=0 name=/home/henrique/safecity-infra inode=394007 dev=fc:00 mode=dir,755 ouid=root ogid=root rdev=00:00 nametype=PARENT cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(11/18/26 18:41:27.618:805) : cwd=/home/henrique/safecity-infra 
+type=SYSCALL msg=audit(11/18/26 18:41:27.618:805) : arch=x86_64 syscall=openat success=yes exit=5 a0=0x3 a1=0x60dab7d5bf84 a2=O_WRONLY|O_CREAT|O_EXCL a3=0x1b4 items=2 ppid=3340 pid=3351 auid=henrique uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=pts1 ses=4 comm=cp exe=/usr/bin/gnucp subj=unconfined key=safecity 

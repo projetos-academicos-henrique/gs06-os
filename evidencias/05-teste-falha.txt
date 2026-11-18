@@ -1,0 +1,18 @@
+$ bash /home/henrique/safecity-infra/scripts/04-teste-falha.sh
+
+2026-11-18 18:46:41 [INFO] [04-teste-falha.sh] ----- Teste 1: processo da API morto (kill -9) -----
+2026-11-18 18:46:41 [INFO] [04-teste-falha.sh] Antes: PID 3717, /health=Healthy
+2026-11-18 18:46:41 [INFO] [04-teste-falha.sh] Processo morto. /health=SEM RESPOSTA
+2026-11-18 18:46:47 [INFO] [04-teste-falha.sh] API recuperada em ~8s (PID 4310)
+2026-11-18 18:46:47 [INFO] [04-teste-falha.sh] ----- Teste 2: API travada (SIGSTOP, processo vivo mas sem responder) -----
+2026-11-18 18:46:50 [INFO] [04-teste-falha.sh] API congelada. /health=SEM RESPOSTA  -> o monitor deve detectar e reiniciar
+2026-11-18 18:47:00 [INFO] [04-teste-falha.sh] API recuperada em ~6s (PID 4310)
+2026-11-18 18:47:00 [INFO] [04-teste-falha.sh] ----- Teste 3: monitor morto (kill -9) -----
+2026-11-18 18:47:05 [INFO] [04-teste-falha.sh] Monitor: PID 3738 -> 4402 (active)
+2026-11-18 18:47:05 [INFO] [04-teste-falha.sh] ----- Teste 4: CPU no limite por 25s (alerta) -----
+2026-11-18 18:43:14 [ALERTA] [monitor.sh] CPU em 100% (limite 80%)
+2026-11-18 18:46:59 [ALERTA] [monitor.sh] API sem resposta em /health (2 checagens). Reiniciando safecity-api
+2026-11-18 18:47:06 [ALERTA] [monitor.sh] CPU em 100% (limite 80%)
+2026-11-18 18:47:17 [ALERTA] [monitor.sh] CPU em 100% (limite 80%)
+2026-11-18 18:47:28 [ALERTA] [monitor.sh] CPU em 100% (limite 80%)
+2026-11-18 18:47:30 [INFO] [04-teste-falha.sh] Teste de falha concluído. Evidências em /var/log/safecity

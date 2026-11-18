@@ -1,0 +1,6 @@
+$ curl -s -w '\nHTTP %{http_code}\n' http://localhost:5080/health; echo; curl -s http://localhost:5080/api/zonas | head -c 600
+
+Healthy
+HTTP 200
+
+[{"id":"paulista-consolacao","nome":"Av. Paulista × R. da Consolação","bairro":"Consolação","tipo":"avenida","latitude":-23.5571,"longitude":-46.662,"raioMetros":300,"riscoPorHora":[0.38,0.31,0.29,0.21,0.18,0.15,0.3,0.46,0.43,0.33,0.31,0.35,0.38,0.36,0.36,0.32,0.47,0.59,0.63,0.62,0.6,0.54,0.47,0.47],"ocorrenciasUltimos30Dias":264,"dicas":["Não use o celular na beira da calçada: motos e bicicletas fazem arrastão.","Se precisar atender, entre em uma loja ou encoste em uma parede.","Desconfie de quem se aproxima pedindo informação."],"atualizadoEm":"2026-11-18T18:41:25.267+00:00"},{"id"

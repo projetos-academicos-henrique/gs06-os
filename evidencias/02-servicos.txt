@@ -1,0 +1,46 @@
+$ systemctl status safecity-api safecity-monitor --no-pager
+
+● safecity-api.service - SafeCity API (ASP.NET Core)
+     Loaded: loaded (/etc/systemd/system/safecity-api.service; enabled; preset: enabled)
+     Active: active (running) since Wed 2026-11-18 18:42:45 UTC; 3min 54s ago
+ Invocation: 673c2bd9e1b14bffb54adfad390a990e
+   Main PID: 3717 (dotnet)
+      Tasks: 20 (limit: 1688)
+     Memory: 70.4M (peak: 70.7M)
+        CPU: 4.000s
+     CGroup: /system.slice/safecity-api.service
+             └─3717 /usr/bin/dotnet /opt/safecity/app/SafeCity.Api.dll
+
+Nov 18 18:42:46 safecity-srv dotnet[3717]: info: Microsoft.EntityFrameworkCore.Migrations[20405]
+Nov 18 18:42:46 safecity-srv dotnet[3717]:       No migrations were applied. The database is already up to date.
+Nov 18 18:42:47 safecity-srv dotnet[3717]: info: Microsoft.Hosting.Lifetime[14]
+Nov 18 18:42:47 safecity-srv dotnet[3717]:       Now listening on: http://0.0.0.0:5080
+Nov 18 18:42:47 safecity-srv dotnet[3717]: info: Microsoft.Hosting.Lifetime[0]
+Nov 18 18:42:47 safecity-srv dotnet[3717]:       Application started. Press Ctrl+C to shut down.
+Nov 18 18:42:47 safecity-srv dotnet[3717]: info: Microsoft.Hosting.Lifetime[0]
+Nov 18 18:42:47 safecity-srv dotnet[3717]:       Hosting environment: Production
+Nov 18 18:42:47 safecity-srv dotnet[3717]: info: Microsoft.Hosting.Lifetime[0]
+Nov 18 18:42:47 safecity-srv dotnet[3717]:       Content root path: /opt/safecity/app
+
+● safecity-monitor.service - SafeCity - monitor de CPU, memória, disco e saúde da API
+     Loaded: loaded (/etc/systemd/system/safecity-monitor.service; enabled; preset: enabled)
+     Active: active (running) since Wed 2026-11-18 18:42:50 UTC; 3min 49s ago
+ Invocation: f8d69b4e236643dcb698262d31e3bcf8
+   Main PID: 3738 (bash)
+      Tasks: 2 (limit: 1688)
+     Memory: 1.7M (peak: 4.2M)
+        CPU: 951ms
+     CGroup: /system.slice/safecity-monitor.service
+             ├─3738 /bin/bash /opt/safecity/infra/scripts/monitor.sh
+             └─4137 sleep 10
+
+Nov 18 18:45:26 safecity-srv bash[3738]: 2026-11-18 18:45:26 [INFO] [monitor.sh] cpu=0% mem=22% disco=61% api=OK
+Nov 18 18:45:26 safecity-srv safecity[4019]: [INFO] [monitor.sh] cpu=0% mem=22% disco=61% api=OK
+Nov 18 18:45:37 safecity-srv bash[3738]: 2026-11-18 18:45:37 [INFO] [monitor.sh] cpu=0% mem=22% disco=61% api=OK
+Nov 18 18:45:48 safecity-srv bash[3738]: 2026-11-18 18:45:48 [INFO] [monitor.sh] cpu=0% mem=22% disco=61% api=OK
+Nov 18 18:45:59 safecity-srv bash[3738]: 2026-11-18 18:45:59 [INFO] [monitor.sh] cpu=0% mem=22% disco=61% api=OK
+Nov 18 18:46:10 safecity-srv bash[3738]: 2026-11-18 18:46:10 [INFO] [monitor.sh] cpu=0% mem=22% disco=61% api=OK
+Nov 18 18:46:21 safecity-srv bash[3738]: 2026-11-18 18:46:21 [INFO] [monitor.sh] cpu=0% mem=22% disco=61% api=OK
+Nov 18 18:46:21 safecity-srv safecity[4096]: [INFO] [monitor.sh] cpu=0% mem=22% disco=61% api=OK
+Nov 18 18:46:32 safecity-srv bash[3738]: 2026-11-18 18:46:32 [INFO] [monitor.sh] cpu=1% mem=22% disco=61% api=OK
+Nov 18 18:46:32 safecity-srv safecity[4136]: [INFO] [monitor.sh] cpu=1% mem=22% disco=61% api=OK

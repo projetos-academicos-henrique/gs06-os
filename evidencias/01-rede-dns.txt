@@ -1,0 +1,39 @@
+$ hostnamectl; echo; hostname -I; echo; grep safecity /etc/hosts; echo; resolvectl dns; echo; ufw status verbose
+
+ Static hostname: safecity-srv
+       Icon name: computer-vm
+         Chassis: vm 🖴
+      Machine ID: d472683f234b4a7695450d22e2ced625
+         Boot ID: f24ceecc4f3c455ab9039ca50f2b840b
+    Product UUID: d472683f-234b-4a76-9545-0d22e2ced625
+  Virtualization: kvm
+Operating System: Ubuntu 26.04.1 LTS
+          Kernel: Linux 7.0.0-43-generic
+    Architecture: x86-64
+ Hardware Vendor: QEMU
+  Hardware Model: Ubuntu 24.04 PC v2 _i440FX + PIIX, arch_caps fix, 1996_
+Hardware Version: pc-i440fx-noble-v2
+Firmware Version: 1.16.3-debian-1.16.3-2
+   Firmware Date: Tue 2014-04-01
+    Firmware Age: 12y 7month 2w 4d
+
+192.168.122.59 
+
+127.0.1.1 safecity
+127.0.1.1 safecity-srv safecity.local # safecity
+
+Global: 1.1.1.1 8.8.8.8
+Link 2 (ens3): 192.168.122.1
+
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing), disabled (routed)
+New profiles: skip
+
+To                         Action      From
+--                         ------      ----
+22/tcp (OpenSSH)           ALLOW IN    Anywhere                  
+5080/tcp                   ALLOW IN    Anywhere                  
+22/tcp (OpenSSH (v6))      ALLOW IN    Anywhere (v6)             
+5080/tcp (v6)              ALLOW IN    Anywhere (v6)             
+

@@ -1,0 +1,63 @@
+$ journalctl -t safecity -n 40 --no-pager; echo; journalctl -u safecity-api -n 20 --no-pager
+
+Nov 18 18:44:42 safecity-srv safecity[3955]: [INFO] [monitor.sh] cpu=0% mem=22% disco=61% api=OK
+Nov 18 18:44:53 safecity-srv safecity[3972]: [INFO] [monitor.sh] cpu=0% mem=22% disco=61% api=OK
+Nov 18 18:45:04 safecity-srv safecity[3986]: [INFO] [monitor.sh] cpu=0% mem=22% disco=61% api=OK
+Nov 18 18:45:15 safecity-srv safecity[4003]: [INFO] [monitor.sh] cpu=1% mem=22% disco=61% api=OK
+Nov 18 18:45:26 safecity-srv safecity[4019]: [INFO] [monitor.sh] cpu=0% mem=22% disco=61% api=OK
+Nov 18 18:45:37 safecity-srv safecity[4033]: [INFO] [monitor.sh] cpu=0% mem=22% disco=61% api=OK
+Nov 18 18:45:48 safecity-srv safecity[4047]: [INFO] [monitor.sh] cpu=0% mem=22% disco=61% api=OK
+Nov 18 18:45:59 safecity-srv safecity[4064]: [INFO] [monitor.sh] cpu=0% mem=22% disco=61% api=OK
+Nov 18 18:46:10 safecity-srv safecity[4079]: [INFO] [monitor.sh] cpu=0% mem=22% disco=61% api=OK
+Nov 18 18:46:21 safecity-srv safecity[4096]: [INFO] [monitor.sh] cpu=0% mem=22% disco=61% api=OK
+Nov 18 18:46:32 safecity-srv safecity[4136]: [INFO] [monitor.sh] cpu=1% mem=22% disco=61% api=OK
+Nov 18 18:46:40 safecity-srv safecity[4241]: [INFO] [05-coletar-evidencias.sh] evidencias/01-rede-dns.txt
+Nov 18 18:46:40 safecity-srv safecity[4244]: [INFO] [05-coletar-evidencias.sh] evidencias/02-servicos.txt
+Nov 18 18:46:40 safecity-srv safecity[4252]: [INFO] [05-coletar-evidencias.sh] evidencias/03-api-health.txt
+Nov 18 18:46:41 safecity-srv safecity[4269]: [INFO] [05-coletar-evidencias.sh] evidencias/04-dependencias.txt
+Nov 18 18:46:41 safecity-srv safecity[4279]: [INFO] [04-teste-falha.sh] ----- Teste 1: processo da API morto (kill -9) -----
+Nov 18 18:46:41 safecity-srv safecity[4284]: [INFO] [04-teste-falha.sh] Antes: PID 3717, /health=Healthy
+Nov 18 18:46:41 safecity-srv safecity[4290]: [INFO] [04-teste-falha.sh] Processo morto. /health=SEM RESPOSTA
+Nov 18 18:46:43 safecity-srv safecity[4308]: [INFO] [monitor.sh] cpu=1% mem=20% disco=61% api=FORA
+Nov 18 18:46:47 safecity-srv safecity[4336]: [INFO] [04-teste-falha.sh] API recuperada em ~8s (PID 4310)
+Nov 18 18:46:47 safecity-srv safecity[4338]: [INFO] [04-teste-falha.sh] ----- Teste 2: API travada (SIGSTOP, processo vivo mas sem responder) -----
+Nov 18 18:46:50 safecity-srv safecity[4343]: [INFO] [04-teste-falha.sh] API congelada. /health=SEM RESPOSTA  -> o monitor deve detectar e reiniciar
+Nov 18 18:46:59 safecity-srv safecity[4363]: [INFO] [monitor.sh] cpu=0% mem=21% disco=61% api=FORA
+Nov 18 18:46:59 safecity-srv safecity[4365]: [ALERTA] [monitor.sh] API sem resposta em /health (2 checagens). Reiniciando safecity-api
+Nov 18 18:47:00 safecity-srv safecity[4373]: [INFO] [04-teste-falha.sh] API recuperada em ~6s (PID 4310)
+Nov 18 18:47:00 safecity-srv safecity[4377]: [INFO] [04-teste-falha.sh] ----- Teste 3: monitor morto (kill -9) -----
+Nov 18 18:47:05 safecity-srv safecity[4406]: [INFO] [04-teste-falha.sh] Monitor: PID 3738 -> 4402 (active)
+Nov 18 18:47:05 safecity-srv safecity[4411]: [INFO] [04-teste-falha.sh] ----- Teste 4: CPU no limite por 25s (alerta) -----
+Nov 18 18:47:05 safecity-srv safecity[4423]: [INFO] [monitor.sh] Monitor iniciado (intervalo 10s)
+Nov 18 18:47:06 safecity-srv safecity[4436]: [INFO] [monitor.sh] cpu=100% mem=21% disco=61% api=OK
+Nov 18 18:47:06 safecity-srv safecity[4438]: [ALERTA] [monitor.sh] CPU em 100% (limite 80%)
+Nov 18 18:47:17 safecity-srv safecity[4455]: [INFO] [monitor.sh] cpu=100% mem=21% disco=61% api=OK
+Nov 18 18:47:17 safecity-srv safecity[4457]: [ALERTA] [monitor.sh] CPU em 100% (limite 80%)
+Nov 18 18:47:28 safecity-srv safecity[4472]: [INFO] [monitor.sh] cpu=100% mem=21% disco=61% api=OK
+Nov 18 18:47:28 safecity-srv safecity[4474]: [ALERTA] [monitor.sh] CPU em 100% (limite 80%)
+Nov 18 18:47:30 safecity-srv safecity[4479]: [INFO] [04-teste-falha.sh] Teste de falha concluído. Evidências em /var/log/safecity
+Nov 18 18:47:30 safecity-srv safecity[4485]: [INFO] [05-coletar-evidencias.sh] evidencias/05-teste-falha.txt
+Nov 18 18:47:30 safecity-srv safecity[4491]: [INFO] [05-coletar-evidencias.sh] evidencias/06-monitor-log.txt
+Nov 18 18:47:30 safecity-srv safecity[4494]: [INFO] [05-coletar-evidencias.sh] evidencias/07-auditoria-log.txt
+Nov 18 18:47:30 safecity-srv safecity[4499]: [INFO] [05-coletar-evidencias.sh] evidencias/08-auditd.txt
+
+Nov 18 18:46:46 safecity-srv dotnet[4310]: info: Microsoft.Hosting.Lifetime[0]
+Nov 18 18:46:46 safecity-srv dotnet[4310]:       Content root path: /opt/safecity/app
+Nov 18 18:46:47 safecity-srv systemd[1]: safecity-api.service: Sent signal SIGSTOP to main process 4310 (dotnet) on client request.
+Nov 18 18:47:00 safecity-srv dotnet[4310]: info: Microsoft.Hosting.Lifetime[0]
+Nov 18 18:47:00 safecity-srv dotnet[4310]:       Application is shutting down...
+Nov 18 18:47:00 safecity-srv systemd[1]: Stopping safecity-api.service - SafeCity API (ASP.NET Core)...
+Nov 18 18:47:00 safecity-srv systemd[1]: safecity-api.service: Deactivated successfully.
+Nov 18 18:47:00 safecity-srv systemd[1]: Stopped safecity-api.service - SafeCity API (ASP.NET Core).
+Nov 18 18:47:00 safecity-srv systemd[1]: safecity-api.service: Consumed 2.074s CPU time over 18.804s wall clock time, 42.4M memory peak.
+Nov 18 18:47:00 safecity-srv systemd[1]: Started safecity-api.service - SafeCity API (ASP.NET Core).
+Nov 18 18:47:01 safecity-srv dotnet[4376]: info: Microsoft.EntityFrameworkCore.Migrations[20405]
+Nov 18 18:47:01 safecity-srv dotnet[4376]:       No migrations were applied. The database is already up to date.
+Nov 18 18:47:01 safecity-srv dotnet[4376]: info: Microsoft.Hosting.Lifetime[14]
+Nov 18 18:47:01 safecity-srv dotnet[4376]:       Now listening on: http://0.0.0.0:5080
+Nov 18 18:47:01 safecity-srv dotnet[4376]: info: Microsoft.Hosting.Lifetime[0]
+Nov 18 18:47:01 safecity-srv dotnet[4376]:       Application started. Press Ctrl+C to shut down.
+Nov 18 18:47:01 safecity-srv dotnet[4376]: info: Microsoft.Hosting.Lifetime[0]
+Nov 18 18:47:01 safecity-srv dotnet[4376]:       Hosting environment: Production
+Nov 18 18:47:01 safecity-srv dotnet[4376]: info: Microsoft.Hosting.Lifetime[0]
+Nov 18 18:47:01 safecity-srv dotnet[4376]:       Content root path: /opt/safecity/app
