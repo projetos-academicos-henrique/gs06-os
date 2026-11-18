@@ -1,0 +1,18 @@
+[Unit]
+Description=SafeCity API (ASP.NET Core)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=safecity
+WorkingDirectory=/opt/safecity/app
+EnvironmentFile=/etc/safecity/safecity.env
+ExecStart=/usr/bin/dotnet /opt/safecity/app/SafeCity.Api.dll
+# Tolerância a falhas: se o processo cair, o systemd sobe de novo em 3 s.
+Restart=always
+RestartSec=3
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

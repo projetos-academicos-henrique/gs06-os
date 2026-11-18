@@ -1,0 +1,12 @@
+[Unit]
+Description=SafeCity - monitor de CPU, memória, disco e saúde da API
+After=safecity-api.service
+
+[Service]
+ExecStart=/bin/bash /opt/safecity/infra/scripts/monitor.sh
+# Tolerância a falhas: o monitor também é reiniciado se morrer.
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
