@@ -151,7 +151,7 @@ Geradas na VM com `sudo ./scripts/05-coletar-evidencias.sh --com-teste`, na past
 
 Ambiente usado: VM Ubuntu Server no KVM/virt-manager (2 CPUs, 4 GB RAM, 25 GB), rede NAT `192.168.122.0/24`.
 
-**Vídeo de demonstração:** *(link do YouTube)*
+**Vídeo de demonstração:** https://youtu.be/unvYdcRhA_Y?si=w1ojO-56z8qdDzPv
 
 ## Dados
 
